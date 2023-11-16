@@ -6,6 +6,7 @@ Repositori ini berisi skrip SQL untuk membuat skema basis data dan menyisipkan d
 Skema Tabel
 
 Tabel mata_kuliah
+
 `id` (INT, PRIMARY KEY): Identifikasi unik untuk setiap mata kuliah.
 
 `kode_matkul` (VARCHAR(50), NOT NULL): Kode mata kuliah.
