@@ -1,0 +1,14 @@
+INSERT INTO mata_kuliah (id, kode_matkul, nama_matkul,sks) VALUES
+	(1,'2001','Basis Data','3'),
+	(2,'2002','Psikolog Dasar','3'),
+	(3,'2003','Kewirausahaan','3');
+
+INSERT INTO mahasiswa (id, nim,first_name,last_name,jurusan,kode_matkul) VALUES
+	(1,'20220801472','Reza','Dwi Putra','Teknik Informatika','2001'),
+	(2,'2022080572','Bayu','Sukmo Sdji','Psikolog','2002'),
+	(3,'2022080372','Rasyid','Abdul Rauf','Manajemen bisnis','2003');
+	
+INSERT INTO dosen (id,kode_dosen,first_name,last_name,jurusan,kode_matkul) VALUES
+	(1,'101','Sumanto','Hartanto','teknik informatika','2001'),
+	(2,'102','Tubagus','Sugiono','psikolog','2002'),
+	(3,'103','Haryanto','Djisamsoe','manajemen bisnis','2003');
