@@ -1,0 +1,26 @@
+CREATE TABLE mata_kuliah (
+    id int PRIMARY KEY,
+    kode_matkul VARCHAR (50) NOT NULL,
+    nama_matkul VARCHAR (50) NOT NULL,
+		sks VARCHAR (50) NOT NULL
+		);
+
+CREATE TABLE mahasiswa (
+    id int PRIMARY KEY,
+    nim VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+		jurusan VARCHAR(50) NOT NULL,
+    kode_matkul VARCHAR (50) NOT NULL,
+    FOREIGN KEY (id) REFERENCES mata_kuliah(id)
+		);
+		
+CREATE TABLE dosen(
+    id int PRIMARY KEY,
+    kode_dosen VARCHAR (50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+		last_name VARCHAR(50) NOT NULL,
+		jurusan VARCHAR(50) NOT NULL,
+		kode_matkul VARCHAR (50) NOT NULL,
+    FOREIGN KEY (id) REFERENCES mata_kuliah(id)
+		);
