@@ -1,0 +1,8 @@
+SELECT dosen.kode_dosen AS `kode dosen`,
+CONCAT_WS(" ",dosen.first_name,dosen.last_name) AS `Full Name`,
+dosen.jurusan AS `jurusan`,
+mata_kuliah.kode_matkul AS `kode matkul`,
+mata_kuliah.nama_matkul AS `Mata Kuliah`, 
+mata_kuliah.sks AS `sks`
+FROM dosen
+INNER JOIN mata_kuliah ON dosen.id = mata_kuliah.id;
