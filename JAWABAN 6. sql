@@ -1,0 +1,11 @@
+SELECT mahasiswa.id AS ID,
+CONCAT_WS(" ",mahasiswa.first_name,mahasiswa.last_name) AS `Nama Mahasiswa`,
+mahasiswa.nim AS `NIM`, 
+mahasiswa.jurusan AS `jurusan`,
+CONCAT_WS(" ",dosen.first_name,dosen.last_name) AS `Nama Dosen`,
+mata_kuliah.kode_matkul as `kode matkul`,
+mata_kuliah.nama_matkul AS `Mata Kuliah`, 
+mata_kuliah.sks AS `SKS`
+FROM mahasiswa
+INNER JOIN dosen ON mahasiswa.id = dosen.id
+LEFT JOIN mata_kuliah on mahasiswa.id = mata_kuliah.id; 
