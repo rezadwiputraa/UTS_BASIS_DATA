@@ -1,0 +1,7 @@
+SELECT mahasiswa.nim AS `NIM`,
+CONCAT_WS(" ", mahasiswa.first_name, mahasiswa.last_name) AS `Full Name`,
+mahasiswa.jurusan AS `jurusan`,
+mata_kuliah.nama_matkul AS `Mata Kuliah`,
+mata_kuliah.sks AS `sks`
+FROM mahasiswa
+INNER JOIN mata_kuliah ON mahasiswa.id = mata_kuliah.id;
